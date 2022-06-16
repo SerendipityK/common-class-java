@@ -16,7 +16,7 @@ public enum ReturnCodeEnum {
     /**授权规则不通过**/
     RC204(204,"授权规则不通过,请稍后再试!"),
     /**access_denied**/
-    RC403(403,"无访问权限,请联系管理员授予权限"),
+    RC403(403,"NOTLOGIN"),
     /**access_denied**/
     RC401(401,"匿名用户访问无权限资源时的异常"),
     /**服务异常**/

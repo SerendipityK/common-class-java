@@ -4,6 +4,8 @@ import com.chen.demo.common.JsonResult;
 import com.chen.demo.enums.ReturnCodeEnum;
 import com.chen.demo.exception.BusinessException;
 import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
@@ -18,8 +20,9 @@ import java.util.List;
 
 // @RestControllerAdvice，RestController的增强类，可用于实现全局异常处理器
 @RestControllerAdvice
-@Slf4j
 public class GlobalExceptionHandler {
+    private Logger log = LoggerFactory.getLogger(GlobalExceptionHandler.class);
+
     // @ExceptionHandler,统一处理某一类异常，从而减少代码重复率和复杂度，
     // 比如要获取自定义异常可以@ExceptionHandler(BusinessException.class)
     @ExceptionHandler(Exception.class)
